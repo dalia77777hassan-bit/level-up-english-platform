@@ -1,16 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Level Up English with Ms Dalia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Level Up English with Ms Dalia</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf2;
+      color: #334155;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(255,255,255,0.95);
+      padding: 14px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-size: 20px;
+      color: #2563eb;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+
+    nav button {
+      border: none;
+      background: #eef4ff;
+      color: #2563eb;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 55px 20px 25px;
+    }
+
+    .hero h2 {
+      font-size: clamp(32px, 6vw, 58px);
+      color: #2563eb;
+      margin-bottom: 12px;
+    }
+
+    .hero .subtitle {
+      font-size: 20px;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .slogan {
+      color: #d58b9b;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .characters {
+      max-width: 850px;
+      margin: 25px auto 10px;
+      display: flex;
+      justify-content: center;
+      align-items: end;
+      gap: 30px;
+      min-height: 230px;
+    }
+
+    .character {
+      text-align: center;
+    }
+
+    .character img {
+      width: 190px;
+      height: 190px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 12px rgba(0,0,0,0.12));
+    }
+
+    .character p {
+      font-weight: bold;
+      color: #475569;
+    }
+
+    .dashboard {
+      max-width: 1150px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+
+    .section-title h3 {
+      font-size: 28px;
+      color: #334155;
+    }
+
+    .section-title p {
+      margin-top: 6px;
+      color: #64748b;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 26px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: 0.25s ease;
+      border: 2px solid transparent;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+      border-color: #dbeafe;
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .card h4 {
+      font-size: 21px;
+      margin-bottom: 8px;
+      color: #2563eb;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #64748b;
+      min-height: 44px;
+      margin-bottom: 18px;
+    }
+
+    .card button {
+      border: none;
+      background: #2563eb;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .card button:hover {
+      background: #1d4ed8;
+    }
+
+    .bottom-slogan {
+      text-align: center;
+      padding: 25px;
+      color: #d58b9b;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f5f9;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .characters {
+        gap: 10px;
+      }
+
+      .character img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .brand-text h1 {
+        font-size: 16px;
+      }
+
+      .characters {
+        min-height: 180px;
+      }
+
+      .character img {
+        width: 125px;
+        height: 125px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <h1>Level Up English with Ms Dalia</h1>
+  <header>
+    <div class="brand">
+      <img src="logo.JPG" alt="Level Up English Logo">
 
-    <p>Welcome to the Learning Adventure!</p>
+      <div class="brand-text">
+        <h1>Level Up English</h1>
+        <p>with Ms Dalia</p>
+      </div>
+    </div>
+
+    <nav>
+      <button>Home</button>
+      <button>Progress</button>
+      <button>Profile</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h2>Welcome to Level Up English</h2>
+
+      <p class="subtitle">
+        Your Learning Adventure Starts Here
+      </p>
+
+      <p class="slogan">
+        The Adventure Starts Here.
+      </p>
+    </section>
+
+    <section class="characters">
+
+      <div class="character">
+        <img src="lingo-official.jpg" alt="Lingo">
+        <p>Lingo</p>
+      </div>
+
+      <div class="character">
+        <img src="mixo-official.jpg" alt="Mixo">
+        <p>Mixo</p>
+      </div>
+
+    </section>
+
+    <section class="dashboard">
+
+      <div class="section-title">
+        <h3>Choose Your Adventure</h3>
+        <p>Where would you like to start learning today?</p>
+      </div>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon">📚</div>
+          <h4>Curriculum</h4>
+          <p>
+            Explore your English curriculum and learning journey.
+          </p>
+          <button>Start Learning</button>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎓</div>
+          <h4>Courses</h4>
+          <p>
+            Discover grammar, paragraph writing and future courses.
+          </p>
+          <button>Explore Courses</button>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎮</div>
+          <h4>Educational Games</h4>
+          <p>
+            Learn English through fun interactive games.
+          </p>
+          <button>Play</button>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎬</div>
+          <h4>Videos</h4>
+          <p>
+            Watch lessons, stories and Lingo adventures.
+          </p>
+          <button>Watch</button>
+        </div>
+
+        <div class="card">
+          <div class="icon">📖</div>
+          <h4>3D Interactive Books</h4>
+          <p>
+            Explore interactive learning books and activities.
+          </p>
+          <button>Open Books</button>
+        </div>
+
+        <div class="card">
+          <div class="icon">🏆</div>
+          <h4>My Progress</h4>
+          <p>
+            Follow your learning progress and future achievements.
+          </p>
+          <button>View Progress</button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <div class="bottom-slogan">
+      Adventures Never End.
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Level Up English with Ms Dalia — All Rights Reserved
+  </footer>
 
 </body>
 </html>
