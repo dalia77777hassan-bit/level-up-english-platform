@@ -71,7 +71,7 @@
 
     .hero {
       text-align: center;
-      padding: 55px 20px 25px;
+      padding: 45px 20px 10px;
     }
 
     .hero h2 {
@@ -94,12 +94,12 @@
 
     .characters {
       max-width: 850px;
-      margin: 25px auto 10px;
+      margin: 20px auto 10px;
       display: flex;
       justify-content: center;
       align-items: end;
-      gap: 30px;
-      min-height: 230px;
+      gap: 35px;
+      min-height: 250px;
     }
 
     .character {
@@ -107,26 +107,28 @@
     }
 
     .character img {
-      width: 190px;
-      height: 190px;
+      width: 210px;
+      height: 210px;
       object-fit: contain;
-      filter: drop-shadow(0 10px 12px rgba(0,0,0,0.12));
+      display: block;
+      margin: auto;
     }
 
     .character p {
+      margin-top: 5px;
       font-weight: bold;
       color: #475569;
     }
 
     .dashboard {
       max-width: 1150px;
-      margin: 20px auto 60px;
+      margin: 15px auto 50px;
       padding: 0 20px;
     }
 
     .section-title {
       text-align: center;
-      margin: 30px 0 20px;
+      margin: 25px 0 20px;
     }
 
     .section-title h3 {
@@ -146,7 +148,7 @@
     }
 
     .card {
-      background: white;
+      background: #ffffff;
       border-radius: 26px;
       padding: 25px;
       text-align: center;
@@ -219,13 +221,9 @@
         display: none;
       }
 
-      .characters {
-        gap: 10px;
-      }
-
       .character img {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
       }
     }
 
@@ -239,12 +237,13 @@
       }
 
       .characters {
+        gap: 10px;
         min-height: 180px;
       }
 
       .character img {
-        width: 125px;
-        height: 125px;
+        width: 135px;
+        height: 135px;
       }
     }
   </style>
@@ -253,6 +252,7 @@
 <body>
 
   <header>
+
     <div class="brand">
 
       <img src="logo.jpg" alt="Level Up English Logo">
@@ -269,6 +269,7 @@
       <button>Progress</button>
       <button>Profile</button>
     </nav>
+
   </header>
 
   <main>
@@ -287,25 +288,34 @@
 
     </section>
 
+
     <section class="characters">
 
       <div class="character">
 
-        <img src="lingo-offical.jpg" alt="Lingo">
+        <img
+          src="lingo-offical.jpg"
+          alt="Lingo"
+        >
 
         <p>Lingo</p>
 
       </div>
 
+
       <div class="character">
 
-        <img src="mixo-official.png" alt="Mixo">
+        <img
+          src="mixo-official.png"
+          alt="Mixo"
+        >
 
         <p>Mixo</p>
 
       </div>
 
     </section>
+
 
     <section class="dashboard">
 
@@ -319,71 +329,111 @@
 
       </div>
 
+
       <div class="cards">
 
+
         <div class="card">
+
           <div class="icon">📚</div>
+
           <h4>Curriculum</h4>
+
           <p>
             Explore your English curriculum and learning journey.
           </p>
+
           <button>Start Learning</button>
+
         </div>
 
+
         <div class="card">
+
           <div class="icon">🎓</div>
+
           <h4>Courses</h4>
+
           <p>
             Discover grammar, paragraph writing and future courses.
           </p>
+
           <button>Explore Courses</button>
+
         </div>
 
+
         <div class="card">
+
           <div class="icon">🎮</div>
+
           <h4>Educational Games</h4>
+
           <p>
             Learn English through fun interactive games.
           </p>
+
           <button>Play</button>
+
         </div>
 
+
         <div class="card">
+
           <div class="icon">🎬</div>
+
           <h4>Videos</h4>
+
           <p>
             Watch lessons, stories and Lingo adventures.
           </p>
+
           <button>Watch</button>
+
         </div>
 
+
         <div class="card">
+
           <div class="icon">📖</div>
+
           <h4>3D Interactive Books</h4>
+
           <p>
             Explore interactive learning books and activities.
           </p>
+
           <button>Open Books</button>
+
         </div>
 
+
         <div class="card">
+
           <div class="icon">🏆</div>
+
           <h4>My Progress</h4>
+
           <p>
             Follow your learning progress and future achievements.
           </p>
+
           <button>View Progress</button>
+
         </div>
+
 
       </div>
 
     </section>
+
 
     <div class="bottom-slogan">
       Adventures Never End.
     </div>
 
   </main>
+
 
   <footer>
     © 2026 Level Up English with Ms Dalia — All Rights Reserved
