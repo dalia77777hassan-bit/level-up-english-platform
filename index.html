@@ -504,12 +504,42 @@ fetch('./curriculum.json')
           gradeButton.style.border = "1px solid #ccc";
           gradeButton.style.cursor = "pointer";
 
-          gradeButton.onclick = () => {
-            alert(
-              `${track.name} - ${grade.name}\n\nChoose Term 1 or Term 2 next.`
-            );
-          };
+      
+gradeButton.onclick = () => {
+  const termBox = document.createElement("div");
 
+  termBox.style.marginTop = "15px";
+  termBox.style.padding = "15px";
+  termBox.style.background = "#ffffff";
+  termBox.style.borderRadius = "12px";
+
+  termBox.innerHTML = `
+    <strong>${track.name} - ${grade.name}</strong>
+    <p>Choose a term:</p>
+  `;
+
+  grade.terms.forEach(term => {
+    const termButton = document.createElement("button");
+
+    termButton.textContent = term.name;
+
+    termButton.style.margin = "5px";
+    termButton.style.padding = "10px 16px";
+    termButton.style.borderRadius = "10px";
+    termButton.style.border = "1px solid #ccc";
+    termButton.style.cursor = "pointer";
+
+    termButton.onclick = () => {
+      alert(
+        `${track.name} - ${grade.name} - ${term.name}\n\nUnits will appear here next.`
+      );
+    };
+
+    termBox.appendChild(termButton);
+  });
+
+  gradeList.appendChild(termBox);
+};
           gradeList.appendChild(gradeButton);
         });
 
