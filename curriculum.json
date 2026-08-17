@@ -125,7 +125,94 @@
             {
               "id": "grade_8_term_1",
               "name": "Term 1",
-              "units": []
+              "units": [
+  {
+    "id": "grade_8_term_1_unit_1",
+    "name": "Gen Alpha",
+    "lessons": [
+      {
+        "id": "grade_8_unit_1_lesson_1_2",
+        "name": "Meet Gen Alpha / Gen Alpha's Digital Life"
+      },
+      {
+        "id": "grade_8_unit_1_lesson_3",
+        "name": "The Digital Bridge"
+      },
+      {
+        "id": "grade_8_unit_1_lesson_5_6",
+        "name": "Let's Talk: Expressing Identity Online"
+      }
+    ],
+    "stories": [
+      {
+        "id": "grade_8_unit_1_story_1",
+        "name": "The Little Inventor",
+        "chapters": [
+          {
+            "id": "grade_8_unit_1_story_1_chapter_1",
+            "name": "Chapter 1"
+          },
+          {
+            "id": "grade_8_unit_1_story_1_chapter_2",
+            "name": "Chapter 2"
+          },
+          {
+            "id": "grade_8_unit_1_story_1_chapter_3",
+            "name": "Chapter 3"
+          }
+        ]
+      },
+      {
+        "id": "grade_8_unit_1_story_2",
+        "name": "The Adventure of the Hidden Island",
+        "chapters": [
+          {
+            "id": "grade_8_unit_1_story_2_chapter_1",
+            "name": "Chapter 1"
+          },
+          {
+            "id": "grade_8_unit_1_story_2_chapter_2",
+            "name": "Chapter 2"
+          },
+          {
+            "id": "grade_8_unit_1_story_2_chapter_3",
+            "name": "Chapter 3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "grade_8_term_1_unit_2",
+    "name": "Unit 2",
+    "lessons": [],
+    "stories": []
+  },
+  {
+    "id": "grade_8_term_1_unit_3",
+    "name": "Unit 3",
+    "lessons": [],
+    "stories": []
+  },
+  {
+    "id": "grade_8_term_1_unit_4",
+    "name": "Unit 4",
+    "lessons": [],
+    "stories": []
+  },
+  {
+    "id": "grade_8_term_1_unit_5",
+    "name": "Unit 5",
+    "lessons": [],
+    "stories": []
+  },
+  {
+    "id": "grade_8_term_1_unit_6",
+    "name": "Unit 6",
+    "lessons": [],
+    "stories": []
+  }
+]
             },
             {
               "id": "grade_8_term_2",
