@@ -448,5 +448,102 @@ fetch('./curriculum.json')
     console.error('Curriculum loading error:', error);
   });
 </script>
+  <script>
+  const curriculumSection = document.createElement("section");
+
+  curriculumSection.id = "curriculum-adventure";
+  curriculumSection.style.display = "none";
+  curriculumSection.style.padding = "40px 20px";
+  curriculumSection.style.maxWidth = "1000px";
+  curriculumSection.style.margin = "0 auto";
+
+  curriculumSection.innerHTML = `
+    <h2>Choose Your Curriculum</h2>
+
+    <div id="curriculumTracks"></div>
+  `;
+
+  document.body.appendChild(curriculumSection);
+
+  async function loadCurriculum() {
+    try {
+      const response = await fetch("./curriculum.json");
+
+      if (!response.ok) {
+        throw new Error("Curriculum file could not be loaded.");
+      }
+
+      const data = await response.json();
+      const container = document.getElementById("curriculumTracks");
+
+      container.innerHTML = "";
+
+      data.curriculumTracks.forEach(track => {
+        const trackBox = document.createElement("div");
+
+        trackBox.style.marginBottom = "30px";
+        trackBox.style.padding = "20px";
+        trackBox.style.borderRadius = "16px";
+        trackBox.style.background = "#f5f1e8";
+
+        trackBox.innerHTML = `
+          <h3>${track.name}</h3>
+          <div class="grade-list"></div>
+        `;
+
+        const gradeList = trackBox.querySelector(".grade-list");
+
+        track.grades.forEach(grade => {
+          const gradeButton = document.createElement("button");
+
+          gradeButton.textContent = grade.name;
+
+          gradeButton.style.margin = "6px";
+          gradeButton.style.padding = "10px 16px";
+          gradeButton.style.borderRadius = "10px";
+          gradeButton.style.border = "1px solid #ccc";
+          gradeButton.style.cursor = "pointer";
+
+          gradeButton.onclick = () => {
+            alert(
+              `${track.name} - ${grade.name}\n\nChoose Term 1 or Term 2 next.`
+            );
+          };
+
+          gradeList.appendChild(gradeButton);
+        });
+
+        container.appendChild(trackBox);
+      });
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function openCurriculum() {
+    curriculumSection.style.display = "block";
+
+    curriculumSection.scrollIntoView({
+      behavior: "smooth"
+    });
+
+    loadCurriculum();
+  }
+
+  document.querySelectorAll("a, button").forEach(element => {
+    const text = element.textContent.trim().toLowerCase();
+
+    if (
+      text.includes("start learning") ||
+      text === "curriculum"
+    ) {
+      element.addEventListener("click", function(event) {
+        event.preventDefault();
+        openCurriculum();
+      });
+    }
+  });
+</script>
 </body>
 </html>
