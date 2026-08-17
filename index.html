@@ -438,6 +438,15 @@
   <footer>
     © 2026 Level Up English with Ms Dalia — All Rights Reserved
   </footer>
-
+<script>
+fetch('./curriculum.json')
+  .then(response => response.json())
+  .then(data => {
+    console.log('Curriculum loaded successfully:', data);
+  })
+  .catch(error => {
+    console.error('Curriculum loading error:', error);
+  });
+</script>
 </body>
 </html>
