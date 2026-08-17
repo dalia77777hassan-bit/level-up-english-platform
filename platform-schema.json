@@ -1,0 +1,126 @@
+{
+  "version": "1.0",
+  "platform": "Level Up English with Ms Dalia",
+  "entities": {
+    "student": {
+      "id": "student_001",
+      "fields": [
+        "name",
+        "gradeId",
+        "groupId",
+        "curriculumId",
+        "startDate",
+        "status"
+      ]
+    },
+    "grade": {
+      "id": "grade_08",
+      "fields": [
+        "name",
+        "curriculumId"
+      ]
+    },
+    "term": {
+      "id": "term_1",
+      "fields": [
+        "gradeId",
+        "name"
+      ]
+    },
+    "unit": {
+      "id": "unit_a",
+      "fields": [
+        "termId",
+        "name"
+      ]
+    },
+    "lesson": {
+      "id": "lesson_01",
+      "fields": [
+        "unitId",
+        "name",
+        "lessonGroup"
+      ]
+    },
+    "activity": {
+      "id": "activity_001",
+      "fields": [
+        "lessonId",
+        "type",
+        "title",
+        "access"
+      ]
+    },
+    "assessment": {
+      "id": "assessment_001",
+      "fields": [
+        "lessonId",
+        "module",
+        "questionCount"
+      ]
+    },
+    "attempt": {
+      "id": "attempt_001",
+      "fields": [
+        "studentId",
+        "assessmentId",
+        "score",
+        "accuracy",
+        "completedAt"
+      ]
+    },
+    "session": {
+      "id": "session_001",
+      "fields": [
+        "studentId",
+        "date",
+        "status"
+      ]
+    },
+    "payment": {
+      "id": "payment_001",
+      "fields": [
+        "studentId",
+        "cycleNumber",
+        "amount",
+        "date",
+        "status",
+        "sessionsCovered"
+      ]
+    },
+    "homework": {
+      "id": "homework_001",
+      "fields": [
+        "studentId",
+        "lessonId",
+        "status",
+        "teacherReview"
+      ]
+    },
+    "review": {
+      "id": "review_001",
+      "fields": [
+        "studentId",
+        "lessonId",
+        "reviewed",
+        "reviewedAt"
+      ]
+    },
+    "teacherNote": {
+      "id": "note_001",
+      "fields": [
+        "studentId",
+        "text",
+        "createdAt"
+      ]
+    }
+  },
+  "rules": [
+    "One student has one permanent studentId across the whole platform.",
+    "Vocabulary Adventure and Grammar Adventure must reference studentId; they must not create separate student identities.",
+    "Grades, Units and Lessons are content entities and must have stable IDs.",
+    "Assessment results are stored as Attempts linked to studentId and assessmentId.",
+    "Sessions are tracked per student; payment cycles are based on sessions, not calendar-month assumptions.",
+    "Sensitive student, payment and teacher-note data must eventually live behind authenticated backend/API permissions."
+  ]
+}

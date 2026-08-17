@@ -1,0 +1,20 @@
+{
+  "grades": [
+    {
+      "id": "grade_08",
+      "name": "Grade 8",
+      "terms": [
+        {
+          "id": "grade_08_term_1",
+          "name": "Term 1",
+          "units": []
+        },
+        {
+          "id": "grade_08_term_2",
+          "name": "Term 2",
+          "units": []
+        }
+      ]
+    }
+  ]
+}
