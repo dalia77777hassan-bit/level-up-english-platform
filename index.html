@@ -529,7 +529,92 @@ gradeButton.onclick = () => {
     termButton.style.border = "1px solid #ccc";
     termButton.style.cursor = "pointer";
 
-    termButton.onclick = () => {
+ termButton.onclick = () => {
+  const unitBox = document.createElement("div");
+
+  unitBox.style.marginTop = "15px";
+  unitBox.style.padding = "15px";
+  unitBox.style.background = "#f7f7f7";
+  unitBox.style.borderRadius = "12px";
+
+  unitBox.innerHTML = `
+    <strong>${track.name} - ${grade.name} - ${term.name}</strong>
+    <p>Choose a unit:</p>
+  `;
+
+  term.units.forEach(unit => {
+    const unitButton = document.createElement("button");
+
+    unitButton.textContent = unit.name;
+
+    unitButton.style.margin = "5px";
+    unitButton.style.padding = "10px 16px";
+    unitButton.style.borderRadius = "10px";
+    unitButton.style.border = "1px solid #ccc";
+    unitButton.style.cursor = "pointer";
+
+    unitButton.onclick = () => {
+      const unitDetails = document.createElement("div");
+
+      unitDetails.style.marginTop = "15px";
+      unitDetails.style.padding = "15px";
+      unitDetails.style.background = "#ffffff";
+      unitDetails.style.borderRadius = "12px";
+
+      unitDetails.innerHTML = `
+        <h4>${unit.name}</h4>
+        <p>Lessons</p>
+      `;
+
+      if (unit.lessons && unit.lessons.length > 0) {
+        unit.lessons.forEach(lesson => {
+          const lessonItem = document.createElement("div");
+
+          lessonItem.textContent = lesson.name;
+          lessonItem.style.padding = "8px 0";
+
+          unitDetails.appendChild(lessonItem);
+        });
+      } else {
+        unitDetails.innerHTML += "<p>No lessons added yet.</p>";
+      }
+
+      if (unit.stories && unit.stories.length > 0) {
+        const storiesTitle = document.createElement("h4");
+
+        storiesTitle.textContent = "Stories";
+        storiesTitle.style.marginTop = "20px";
+
+        unitDetails.appendChild(storiesTitle);
+
+        unit.stories.forEach(story => {
+          const storyTitle = document.createElement("strong");
+
+          storyTitle.textContent = story.name;
+          storyTitle.style.display = "block";
+          storyTitle.style.marginTop = "10px";
+
+          unitDetails.appendChild(storyTitle);
+
+          story.chapters.forEach(chapter => {
+            const chapterItem = document.createElement("div");
+
+            chapterItem.textContent = chapter.name;
+            chapterItem.style.padding = "5px 0 5px 15px";
+
+            unitDetails.appendChild(chapterItem);
+          });
+        });
+      }
+
+      unitBox.appendChild(unitDetails);
+    };
+
+    unitBox.appendChild(unitButton);
+  });
+
+  termBox.appendChild(unitBox);
+};
       alert(
         `${track.name} - ${grade.name} - ${term.name}\n\nUnits will appear here next.`
       );
