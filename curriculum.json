@@ -1,18 +1,336 @@
 {
-  "grades": [
+  "version": "2.0",
+  "platform": "Level Up English with Ms Dalia",
+  "curriculumTracks": [
     {
-      "id": "grade_08",
-      "name": "Grade 8",
-      "terms": [
+      "id": "main_curriculum",
+      "name": "Main Curriculum",
+      "grades": [
         {
-          "id": "grade_08_term_1",
-          "name": "Term 1",
-          "units": []
+          "id": "grade_1",
+          "name": "Grade 1",
+          "terms": [
+            {
+              "id": "grade_1_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_1_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
         },
         {
-          "id": "grade_08_term_2",
-          "name": "Term 2",
-          "units": []
+          "id": "grade_2",
+          "name": "Grade 2",
+          "terms": [
+            {
+              "id": "grade_2_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_2_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_3",
+          "name": "Grade 3",
+          "terms": [
+            {
+              "id": "grade_3_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_3_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_4",
+          "name": "Grade 4",
+          "terms": [
+            {
+              "id": "grade_4_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_4_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_5",
+          "name": "Grade 5",
+          "terms": [
+            {
+              "id": "grade_5_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_5_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_6",
+          "name": "Grade 6",
+          "terms": [
+            {
+              "id": "grade_6_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_6_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_7",
+          "name": "Grade 7",
+          "terms": [
+            {
+              "id": "grade_7_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_7_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_8",
+          "name": "Grade 8",
+          "terms": [
+            {
+              "id": "grade_8_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_8_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_9",
+          "name": "Grade 9",
+          "terms": [
+            {
+              "id": "grade_9_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_9_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "grade_10",
+          "name": "Grade 10",
+          "terms": [
+            {
+              "id": "grade_10_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "grade_10_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gulf_curriculum",
+      "name": "Gulf Curriculum",
+      "grades": [
+        {
+          "id": "gulf_grade_1",
+          "name": "Grade 1",
+          "terms": [
+            {
+              "id": "gulf_grade_1_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_1_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_2",
+          "name": "Grade 2",
+          "terms": [
+            {
+              "id": "gulf_grade_2_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_2_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_3",
+          "name": "Grade 3",
+          "terms": [
+            {
+              "id": "gulf_grade_3_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_3_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_4",
+          "name": "Grade 4",
+          "terms": [
+            {
+              "id": "gulf_grade_4_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_4_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_5",
+          "name": "Grade 5",
+          "terms": [
+            {
+              "id": "gulf_grade_5_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_5_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_6",
+          "name": "Grade 6",
+          "terms": [
+            {
+              "id": "gulf_grade_6_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_6_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_7",
+          "name": "Grade 7",
+          "terms": [
+            {
+              "id": "gulf_grade_7_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_7_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_8",
+          "name": "Grade 8",
+          "terms": [
+            {
+              "id": "gulf_grade_8_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_8_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_9",
+          "name": "Grade 9",
+          "terms": [
+            {
+              "id": "gulf_grade_9_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_9_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
+        },
+        {
+          "id": "gulf_grade_10",
+          "name": "Grade 10",
+          "terms": [
+            {
+              "id": "gulf_grade_10_term_1",
+              "name": "Term 1",
+              "units": []
+            },
+            {
+              "id": "gulf_grade_10_term_2",
+              "name": "Term 2",
+              "units": []
+            }
+          ]
         }
       ]
     }
